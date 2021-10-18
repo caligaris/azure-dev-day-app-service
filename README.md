@@ -5,7 +5,7 @@
 
 - [Requirements](#requirements)
 - [Step 1: Create a Web App in the Azure portal](#step-1-create-a-web-app-in-the-azure-portal)
-- [Step 2: Deploy Github application ](#step-2-deploy-github-application)
+- [Step 2: Deploy GitHub application ](#step-2-deploy-github-application)
 - [Step 3: Setup application configuration](#step-3-setup-application-configuration)
 - [Step 4: Setup auto-scale](#step-4-setup-auto-scale)
 - [Step 5: Load CPU and observe metric](#step-5-load-cpu-and-observe-metric)
@@ -20,17 +20,19 @@ Hosting a Web app in App Services is a great way for developers to leverage the 
 
 During this lab you will learn to:
 
-- Deploy a sample app hosted in a public Github repo.
+- Deploy a sample app hosted in a public GitHub repo.
 - Setup application configuration and environment variables.
 - Setup auto scale base on average CPU consumption.
 - Load the CPU and observe auto scale events.
 
 
-**NOTE: This exercise is a section of a day-long presentation on Azure App Innovation, the complete workshop may be found [here](https://aka.ms/azuredevdaylabs).**
+**NOTE: This exercise is a section of a day-long workshop on Azure Dev Day, the complete workshop labs may be found [here](https://aka.ms/azuredevdaylabs).**
 
 ## Requirements
 
-This lab assumes the user already has an Azure subscription with contributor access. 
+This lab assumes the user already has an Azure subscription with contributor access.
+
+To get a free account click here: [Get an Azure free account](https://azure.microsoft.com/en-us/free)
 
 ## Step 1: Create a Web App in the Azure portal
 
@@ -63,11 +65,13 @@ This lab assumes the user already has an Azure subscription with contributor acc
     ![Got to resource](media/go_to_resource.png)
 
 
-## Step 2: Deploy Github application
+## Step 2: Deploy GitHub application
 
 From the Overview section you will see a dashboard with different metrics and on top of them an **Essentials** section with important information including the **URL** of your new App Service web app
 
 ![URL](media/url.png)
+
+The first load might take about a minute.
 
 1. From left menu under the **Deployment** section click on **Deployment Center**.
     
@@ -92,7 +96,7 @@ The deployment time would take a couple of minutes, continue refreshing the url 
 
 ![Web App](media/webapp_html.png)
 
-The web application does not require additional configuration to work, however in order to demonstrate how to setup application settings like connection strings or environment variables we are going to setup an environment variable that will be append to the Welcome message.
+The web application does not require additional configuration to work, however in order to demonstrate how to setup application settings like connection strings or environment variables we are going to setup an environment variable that will be appended to the Welcome message.
 
 1. From the Azure portal in the **App Service** view, under the **Settings** section navigate to the **Configuration** option.
 
@@ -127,7 +131,7 @@ One of the many features that App Services provides is to automatically scale th
 
     ![Scale out](media/scale_out.png)
 
-5. Add another rule, **Operator**: [Less than], **Metric threshold to triger scale action**:[35], **Duration (minutes)**: [5] and in **Operation** dropdown choose **Decrease count by** then add the rule.
+5. Add another rule, on the Scale rule pane fill the next values: **Operator**: [Less than], **Metric threshold to triger scale action**:[35], **Duration (minutes)**: [5] and in **Operation** dropdown choose **Decrease count by** then click the **Add** button.
 
 6. In the **Instance limits** section set the Minimum instance to 1 and Maximum to 2.
 
@@ -136,9 +140,9 @@ One of the many features that App Services provides is to automatically scale th
 
 ## Step 5: Load CPU and observe metric
 
-The web app deployed from Github is a very simple one-page app that provides 2 links one to generate CPU load and another one to stop it. 
+The web app deployed from GitHub is a very simple one-page app that provides 2 links one to generate CPU load and another one to stop it. 
 
-    ![Web App](media/webapp.png)
+![Web App](media/webapp.png)
 
 1. To generate CPU load navigate to the URL of the web app and click on the **Generate CPU Load** link, you should see the label **CPU Loaded: False** change to **CPU Loaded: True**
 

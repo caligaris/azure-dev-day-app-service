@@ -30,7 +30,7 @@ During this lab you will learn to:
 
 ## Requirements
 
-This example assumes the user already has an Azure subscription with contributor access. 
+This lab assumes the user already has an Azure subscription with contributor access. 
 
 ## Step 1: Create a Web App in the Azure portal
 

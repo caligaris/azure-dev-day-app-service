@@ -34,7 +34,7 @@ This example assumes the user already has an Azure subscription with contributor
 
 ## Step 1: Create a Web App in the Azure portal
 
-1. Login to portal.azure.com
+1. Login to [portal.azure.com](https://portal.azure.com)
 
 2. Click on create a resource
 
